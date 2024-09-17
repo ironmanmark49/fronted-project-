@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.jodit-container:not(.jodit_inline) {
+    border: 1px solid #2c2e33 !important;
+    font-weight: normal !important;
+    font-size: 0.875rem !important;
+    padding: 0rem !important;
+    background-color: #191c24 !important;
+    border-radius: 6px !important;
+    color: #ffffff !important;
+}
+
+.jodit-container:not(.jodit_inline) .jodit-workplace {
+    font-weight: normal !important;
+    font-size: 0.875rem !important;
+    padding: 0.625rem 0.6875rem !important;
+    background-color: transparent !important;
+    border-radius: 6px !important;
+    color: #ffffff !important;
+}
+
+.jodit-wysiwyg{
+    /* min-height: 300px !important; */
+    padding: 0 !important;
+}
+
+.jodit-popup__content{
+    background: #2c2e33 !important;
+}
+
+.jodit-toolbar-button__button{
+    color: #ffffff !important;
+}
+
+.jodit-toolbar__box {
+    border: 1px solid rgba(71, 164, 71, 0.5) !;
+    background-color: #2a303856 !important;
+}
+
+.jodit-add-new-line, .jodit-add-new-line span{
+    display: none !important;
+}
+
+.jodit-toolbar-button__trigger svg,
+.jodit-icon{
+    fill: #ffffff !important;
+}
