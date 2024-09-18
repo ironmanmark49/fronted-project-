@@ -60,7 +60,7 @@ const UpdateAdmin = () => {
     const handleSubmit = (e, id) => {
         e.preventDefault();
         axios
-            .patch(`http://localhost:8000/admin/${id}`, inputStats)
+            .patch(`http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/admin/${id}`, inputStats)
             .then((response) => {
                 const apiResponse = response.data;
                 if (apiResponse.status === 200) {

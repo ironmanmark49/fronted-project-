@@ -191,7 +191,7 @@ const Sidebar = () => {
                       <>
                         <img
                           className="img-xs rounded-circle"
-                          src={`http://localhost:8000/images/userprofile/${ProfilePic}`}
+                          src={`http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/images/userprofile/${ProfilePic}`}
                           alt=""
                         />
                         <span className="count bg-success"></span>

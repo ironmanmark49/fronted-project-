@@ -24,7 +24,7 @@ const UserContext = ({ children }) => {
     const userEmail = JSON.parse(sessionStorage.getItem("user data")) ?? [0];
     if(userEmail){
       axios
-      .post("http://localhost:8000/", userEmail)
+      .post("http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/", userEmail)
       .then((resp) => {
         const apiResp = resp.data;
         if (apiResp.status === 200) {
@@ -42,7 +42,7 @@ const UserContext = ({ children }) => {
   }
 
   const DeleBlogHandler = (id) => {
-    axios.delete(`http://localhost:8000/${id}`)
+    axios.delete(`http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/${id}`)
       .then((resp) => {
         const apiResp = resp.data;
         if (apiResp.status === 200) {
@@ -62,7 +62,7 @@ const UserContext = ({ children }) => {
   }
 
   const AddBlog = (inputStats) => {
-    axios.post("http://localhost:8000/addBlog", inputStats, {
+    axios.post("http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/addBlog", inputStats, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -83,7 +83,7 @@ const UserContext = ({ children }) => {
 
   const UpdateBlogHandler = (id, inputStats) => {
 
-    axios.patch(`http://localhost:8000/${id}`, inputStats, {
+    axios.patch(`http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/${id}`, inputStats, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -103,7 +103,7 @@ const UserContext = ({ children }) => {
   }
 
   const UpdateUserProfile = (id, inputStats) => {
-    axios.patch(`http://localhost:8000/admin/${id}`, inputStats, {
+    axios.patch(`http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/admin/${id}`, inputStats, {
       headers: {
         "Content-Type": "multipart/form-data",
       },

@@ -68,7 +68,7 @@ const UserProfileUpdate = () => {
       };
 
     useEffect(()=>{
-        axios.post("http://localhost:8000/personalAdmin", {id : detailArray[3]} )
+        axios.post("http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/personalAdmin", {id : detailArray[3]} )
         .then((resp) => {
             const apiResp = resp.data;
             if(apiResp.status === 200){

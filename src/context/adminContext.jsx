@@ -22,7 +22,7 @@ const AdminContext = ({children}) => {
       };
 
       const getAllUser = () => {
-        axios.get("http://localhost:8000/admin")
+        axios.get("http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/admin")
         .then((resp) => {
             const apiResp = resp.data;
             if(apiResp.status === 200){
@@ -39,7 +39,7 @@ const AdminContext = ({children}) => {
 
       const AddUser = (inputStats) => {
         console.log(inputStats);
-        axios.post("http://localhost:8000/admin", inputStats)
+        axios.post("http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/admin", inputStats)
         .then((resp) => {
             const apiResp = resp.data;
             if(apiResp.status === 200){
@@ -55,7 +55,7 @@ const AdminContext = ({children}) => {
       }
 
       const fetchAllBlog = () => {
-        axios.get("http://localhost:8000/allblogs")
+        axios.get("http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/allblogs")
         .then((resp) => {
             const apiResp = resp.data
             if(apiResp.status === 200){
@@ -72,7 +72,7 @@ const AdminContext = ({children}) => {
       }
 
       const fetchAllUsers = () => {
-        axios.get("http://localhost:8000/admin")
+        axios.get("http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/admin")
         .then((resp) => {
             const apiResp = resp.data
             if(apiResp.status === 200){
@@ -86,7 +86,7 @@ const AdminContext = ({children}) => {
       }
 
       const deleteUser = (id) => {
-        axios.delete(`http://localhost:8000/admin/${id}`)
+        axios.delete(`http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/admin/${id}`)
         .then((resp) => {
             const apiResp = resp.data;
             if(apiResp.status === 200){
