@@ -42,7 +42,7 @@ const Login = () => {
     const HandleSubmit = (e) => {
         e.preventDefault();
 
-        axios.post('http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/login', inputField)
+        axios.post('https://-65-0-132-17.ap-south-1.compute.amazonaws.com/api/login', inputField)
         .then((resp)=>{
             const apiResp = resp.data;
             if(apiResp.status === 200) {

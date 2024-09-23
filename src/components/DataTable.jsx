@@ -68,7 +68,7 @@ const DataTable = ({ BlogData, activeCard }) => {
                                             {BlogData?.map((data, key) => (
                                                 <tr key={key}>
                                                     <td>
-                                                        <img src={`http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/images/coverimage/${data?.CoverImage}`} alt="errror-icon" />
+                                                        <img src={`https://-65-0-132-17.ap-south-1.compute.amazonaws.com/api/images/coverimage/${data?.CoverImage}`} alt="errror-icon" />
                                                     </td>
                                                     <td>
                                                         <span className="">{data?.CompanyName}</span>
@@ -100,7 +100,7 @@ const DataTable = ({ BlogData, activeCard }) => {
                                             {BlogData[activeCard]?.map((data, key) => (
                                                 <tr key={key}>
                                                     <td>
-                                                        <img src={`http://ec2-3-109-32-46.ap-south-1.compute.amazonaws.com/api/images/${data?.CoverImage? "coverimage" : "userprofile"}/${data?.CoverImage??data?.ProfilePicture}`} alt="errror-icon" />
+                                                        <img src={`https://-65-0-132-17.ap-south-1.compute.amazonaws.com/api/images/${data?.CoverImage? "coverimage" : "userprofile"}/${data?.CoverImage??data?.ProfilePicture}`} alt="errror-icon" />
                                                     </td>
                                                     <td>{data?.CompanyName}</td>
                                                     <td>{data?.CompanyEmail}</td>
